@@ -1,0 +1,192 @@
+.amlo-sidebar {
+    width: 100%;
+}
+
+.amlo-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    border: 1px solid #e2d6c5;
+    box-shadow: 0 10px 30px -5px rgba(105, 28, 50, 0.08), 0 8px 20px -6px rgba(105, 28, 50, 0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.amlo-card:hover {
+    box-shadow: 0 15px 35px -5px rgba(105, 28, 50, 0.12), 0 10px 25px -5px rgba(105, 28, 50, 0.08);
+}
+
+.amlo-card-header {
+    background: linear-gradient(135deg, #691c32 0%, #4a1121 100%);
+    padding: 0.5rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #b38e5d;
+}
+
+.gob-tag {
+    color: #b38e5d;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.party-tag {
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.25rem;
+}
+
+.amlo-profile-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1.25rem 0.75rem 1.25rem;
+    background: linear-gradient(to bottom, #fdfbfa 0%, #ffffff 100%);
+}
+
+.amlo-avatar-frame {
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 50%;
+    border: 3px solid #b38e5d;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(105, 28, 50, 0.15);
+    background-color: #f3ece3;
+    transition: transform 0.3s ease;
+}
+
+.amlo-avatar-frame:hover {
+    transform: scale(1.05);
+}
+
+.amlo-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.amlo-name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #691c32;
+    margin-top: 0.75rem;
+    margin-bottom: 0.15rem;
+    text-align: center;
+    font-family: 'Outfit', 'Inter', sans-serif;
+}
+
+.amlo-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #b38e5d;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
+    text-align: center;
+}
+
+.amlo-speech-bubble {
+    position: relative;
+    background-color: #fdfaf5;
+    border: 1px solid #f2e7d5;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin: 0 1.25rem 1.25rem 1.25rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.01);
+}
+
+.bubble-text {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #4a4a4a;
+    margin: 0;
+    text-align: justify;
+}
+
+.bubble-text strong {
+    color: #691c32;
+    font-weight: 600;
+}
+
+.shortcuts-section {
+    padding: 0 1.25rem 1.25rem 1.25rem;
+    border-top: 1px dashed #e5dccf;
+}
+
+.shortcuts-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #691c32;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.shortcuts-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.shortcut-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 0.85rem;
+    background-color: #ffffff;
+    border: 1px solid #e5dccf;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.shortcut-btn:hover {
+    border-color: #b38e5d;
+    background-color: #fcf9f5;
+    transform: translateX(4px);
+    box-shadow: 0 2px 8px rgba(179, 142, 93, 0.1);
+}
+
+.btn-icon {
+    font-size: 1.1rem;
+}
+
+.btn-label {
+    font-size: 0.825rem;
+    font-weight: 600;
+    color: #4a4a4a;
+    transition: color 0.2s ease;
+}
+
+.shortcut-btn:hover .btn-label {
+    color: #691c32;
+}
+
+.municipal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 0.85rem;
+    background-color: #faf7f2;
+    border-top: 1px solid #e2d6c5;
+    font-size: 0.75rem;
+    color: #8c8273;
+    font-weight: 600;
+}
+
+.reynosa-logo {
+    width: 1rem;
+    height: 1rem;
+    color: #b38e5d;
+}
