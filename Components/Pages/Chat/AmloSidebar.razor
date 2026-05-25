@@ -1,0 +1,76 @@
+@namespace Morena.Components.Pages.Chat
+
+<div class="amlo-sidebar">
+    <div class="amlo-card">
+        <!-- Institutional Header Banner -->
+        <div class="amlo-card-header">
+            <span class="gob-tag">GOBIERNO DE MÉXICO</span>
+            <span class="party-tag">MORENA</span>
+        </div>
+
+        <div class="amlo-profile-area">
+            <div class="amlo-avatar-frame">
+                <img src="images/amlo_avatar.png" alt="Andrés Manuel López Obrador Avatar" class="amlo-avatar-img" />
+            </div>
+            <h2 class="amlo-name">Andrés Manuel López Obrador</h2>
+            <p class="amlo-title">Guía Digital de la Transformación</p>
+        </div>
+
+        <!-- Speech Bubble -->
+        <div class="amlo-speech-bubble">
+            <div class="bubble-arrow"></div>
+            <p class="bubble-text">
+                "¡Hola, ciudadana, ciudadano! Qué gusto saludarte. Aquí estamos para orientarte en tus trámites burocráticos de <strong>Reynosa, Tamaulipas</strong>. 
+                De manera directa, con honestidad y sin intermediarios. Pregúntame con confianza sobre el predial, becas municipales o actas de nacimiento. ¡Me canso ganso que te ayudamos!"
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="shortcuts-section">
+            <h3 class="shortcuts-title">Trámites Frecuentes</h3>
+            <div class="shortcuts-grid">
+                <button class="shortcut-btn" @onclick='() => ClickShortcut("¿Cómo pago el impuesto predial y qué descuentos hay?")'>
+                    <span class="btn-icon">💰</span>
+                    <span class="btn-label">Impuesto Predial</span>
+                </button>
+                <button class="shortcut-btn" @onclick='() => ClickShortcut("¿Cuáles son los requisitos y promedio mínimo para las Becas Municipales?")'>
+                    <span class="btn-icon">🎓</span>
+                    <span class="btn-label">Becas Municipales</span>
+                </button>
+                <button class="shortcut-btn" @onclick='() => ClickShortcut("¿Cuánto cuesta y cómo tramito una copia del Acta de Nacimiento?")'>
+                    <span class="btn-icon">📄</span>
+                    <span class="btn-label">Acta de Nacimiento</span>
+                </button>
+                <button class="shortcut-btn" @onclick='() => ClickShortcut("¿Qué requisitos necesito para la Licencia de Funcionamiento de un negocio?")'>
+                    <span class="btn-icon">🏢</span>
+                    <span class="btn-label">Licencia de Negocio</span>
+                </button>
+                <button class="shortcut-btn" @onclick='() => ClickShortcut("¿Cómo tramito mi Cartilla del Servicio Militar en Reynosa?")'>
+                    <span class="btn-icon">🎖️</span>
+                    <span class="btn-label">Cartilla Militar</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Municipal Footer Logo info -->
+        <div class="municipal-footer">
+            <svg class="reynosa-logo" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/>
+            </svg>
+            <span>Ayuntamiento de Reynosa</span>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public EventCallback<string> OnShortcutSelected { get; set; }
+
+    private async Task ClickShortcut(string queryText)
+    {
+        if (OnShortcutSelected.HasDelegate)
+        {
+            await OnShortcutSelected.InvokeAsync(queryText);
+        }
+    }
+}

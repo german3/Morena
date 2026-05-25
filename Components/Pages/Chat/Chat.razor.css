@@ -1,0 +1,38 @@
+.main-layout-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    align-items: start;
+}
+
+.chat-main-area {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    border: 1px solid #e5dccf;
+    box-shadow: 0 4px 20px rgba(105, 28, 50, 0.03);
+    overflow: hidden;
+    min-height: 70vh;
+}
+
+.chat-container {
+    position: sticky; 
+    bottom: 0; 
+    padding: 1rem 1.5rem 1.5rem 1.5rem; 
+    border-top: 1px solid #e5dccf; 
+    background-color: #fdfcfb;
+}
+
+.chat-sidebar-area {
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .main-layout-grid {
+        grid-template-columns: 1fr 360px;
+        gap: 2rem;
+    }
+}
+
